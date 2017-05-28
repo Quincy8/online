@@ -1,0 +1,26 @@
+{
+  "name": "The messy heads",
+  "version": "1.0.0",
+  "description": "Blog & Print Issues. It's a little messy.",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "web",
+    "blog",
+    "thoughts",
+    "node",
+    "express"
+  ],
+  "author": "Quincy Okwuego",
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.2"
+  }
+}

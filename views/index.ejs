@@ -1,0 +1,70 @@
+<% include header %>
+<nav>
+		 <ul class="navigatie">
+			 <li><a href="#">about</a></li>
+			 <li><a href="#">contact</a></li>
+       <li><a href="#">shop</a></li>
+       <li><a href="#">stockists</a></li>
+ </nav>
+<img class="logo" src="https://themessyheadsdotcom.files.wordpress.com/2017/02/logo-01.png">
+
+<h4> Futured artwork</h4>
+
+<div id="slider">
+  <a href="#" class="control_next">></a>
+  <a href="#" class="control_prev"><</a>
+  <ul>
+    <li style="background: url('https://themessyheadsdotcom.files.wordpress.com/2016/11/img_06851.jpg?w=508&h=364') center center no-repeat;
+  background-size: cover;"> </li>
+    <li style="background: url('https://themessyheadsdotcom.files.wordpress.com/2016/09/alycia-dalfonsi.jpg?w=840') center center no-repeat;
+  background-size: cover;"> </li>
+  <li style="background: url('https://themessyheadsdotcom.files.wordpress.com/2016/09/sydney-brunette-copy.jpg?w=840') center center no-repeat;
+  background-size: cover;"> </li>
+  <li style="background: url('https://themessyheadsdotcom.files.wordpress.com/2016/09/ashli-swanson-copy.jpg?w=840') center center no-repeat;
+  background-size: cover;"> </li>
+  </ul>
+</div>
+
+<h4> CHECK THIS OUT</h4>
+
+
+</svg>
+  <% var teller = 1; %>
+  <% nieuws.forEach(function(item){ %>
+
+
+    <section>
+
+      <img src="/img/<%- item.afbeeldings %>" alt="<%- item.titel %>">
+
+        <h2 class="titel">
+          <a href=/items/<%- item.id %>><%- item.titel %></a>
+        </h2>
+        <p><%- item.datum %></p>
+
+        <p>
+          <%- item.samenvatting %>
+        </p>
+    </section>
+    <% teller++;}); %>
+
+    <nav>
+      <h3>Categories:</h3>
+      <% for (var i = 0; i < categorieen.length; i++) { %>
+        <a href="/categorieen/<%- i %>"><%- categorieen[i] %></a>
+      <% } %>
+    </nav>
+
+<div class="einde">
+    <h4>CHECK OUT OUR SHOP!</h4>
+<p>We stock the <a href="#">shop</a> with a new t-shirt every season, and some other goodies!</p>
+
+
+    <h4>SHARE WITH YOUR FRIENDS!</h4>
+    <p>Let your friends or social media followers know we exist! Hashtag your stuff #STAYMESSY so we can check it out!</p>
+
+  <h4>GIVE US FEEDBACK!</h4>
+<p>We love hearing from you.
+Send us an <a href="#">email</a></p>
+</div>
+<% include footer %>

@@ -1,0 +1,54 @@
+<% include header %>
+<img class="logo" src="https://themessyheadsdotcom.files.wordpress.com/2017/02/logo-01.png">
+
+
+<h1><% for (var i = 0; i < item.categorieen.length; i++) { %>
+  <a href="/categorieen/<%- i %>"><%- item.categorieen[i] %></a><% if (i+1< item.categorieen.length){ %>, <% } %>
+<% } %></h1>
+<section>
+  <img src="/img/<%- item.afbeeldingl %>" alt="<%- item.titel %>">
+
+    <h2 class="titel">
+      <%- item.titel %>
+    </h2>
+
+
+    <p><%- item.datum %></p>
+
+    <p>
+      <%- item.body %>
+      <img src="/img/<%- item.afbeeldinga %>" alt="<%- item.titel %>">
+      <img src="/img/<%- item.afbeeldingb %>" alt="<%- item.titel %>">
+      <img src="/img/<%- item.afbeeldingc %>" alt="<%- item.titel %>">
+
+    </p>
+
+
+        <p>
+          <%- item.body2 %>
+
+        </p>
+
+    <p>posted in:
+
+      <% for (var i = 0; i < item.categorieen.length; i++) { %>
+        <a href="/categorieen/<%- i %>"><%- item.categorieen[i] %></a><% if (i+1< item.categorieen.length){ %>, <% } %>
+      <% } %>
+    </p>
+
+    <div id="form-main">
+      <h4> What did you think? </h4>
+      <div id="disqus_thread"></div>
+  <script>
+
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://themessyheads-1.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+<% include footer %>
